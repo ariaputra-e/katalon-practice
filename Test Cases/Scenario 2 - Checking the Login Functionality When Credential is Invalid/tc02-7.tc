@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Memeriksa bagaimana sistem merespon setelah terjadi kesalahan login secara berulang-ulang pada kedua kredensial yang salah</description>
+   <name>tc02-7</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fad7ef63-66af-4492-97b5-89380af861fd</testCaseGuid>
+</TestCaseEntity>

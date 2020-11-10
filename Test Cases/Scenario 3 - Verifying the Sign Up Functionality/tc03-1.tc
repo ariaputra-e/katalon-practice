@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek apakah user dapat melakukan sign up setelah menekan tombol Get Started</description>
+   <name>tc03-1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3dcdf4dd-211b-435e-bb41-81fad464b2dc</testCaseGuid>
+</TestCaseEntity>

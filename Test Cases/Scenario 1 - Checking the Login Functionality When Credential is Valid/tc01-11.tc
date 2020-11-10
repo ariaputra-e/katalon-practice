@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek apakah user dapat masuk ketika menginput security code yang sesuai ketika konfirmasi</description>
+   <name>tc01-11</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>72bb2cce-e2a6-4e32-b705-201120311b11</testCaseGuid>
+</TestCaseEntity>

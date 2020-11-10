@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Memeriksa respon sistem ketika kolom email diisi tidak sesuai dengan format email</description>
+   <name>tc03-4</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b5c1fa0b-c2cc-480e-a216-8a41787138eb</testCaseGuid>
+</TestCaseEntity>

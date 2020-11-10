@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek bagaimana sistem merespon ketika field email serta password diisi dengan valid</description>
+   <name>tc01-4</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a1f93c5f-9d3a-4f4a-9bc4-3670c2b945e8</testCaseGuid>
+</TestCaseEntity>

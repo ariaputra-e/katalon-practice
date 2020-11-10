@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Memeriksa apakah user dapat menginput security code tanpa harus memulai inputan dari text box pertama</description>
+   <name>tc01-7</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3ee650f8-e659-4f03-92c5-a16e0306978f</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek apakah semua elemen untuk login telah termuat dengan lengkap ketika aplikasi dibuka</description>
+   <name>tc02-1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9350bf42-fbe3-44a7-b9c0-fff1871115c2</testCaseGuid>
+</TestCaseEntity>

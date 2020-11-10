@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Memeriksa apakah user dapat lanjut ketika mengkonfirmasi security code dengan tidak benar</description>
+   <name>tc01-10</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>65b74853-5d10-4dca-bb69-a2229a20ec4d</testCaseGuid>
+</TestCaseEntity>
