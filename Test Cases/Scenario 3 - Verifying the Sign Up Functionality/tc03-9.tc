@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Memeriksa respon sistem ketika kolom confirm password tidak sama dengan password nya</description>
+   <name>tc03-9</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f32dbe44-f7c2-49b1-a8b0-266c9b5a0d2f</testCaseGuid>
+</TestCaseEntity>

@@ -60,7 +60,7 @@ Mobile.delay(2)
 
 Mobile.tap(findTestObject('Object Repository/confpassInput'), 0)
 
-driver.getKeyboard().sendKeys('12345678')
+driver.getKeyboard().sendKeys('1234567890')
 
 driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 

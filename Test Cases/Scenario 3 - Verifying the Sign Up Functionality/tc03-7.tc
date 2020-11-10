@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Memeriksa respon sistem ketika kolom confirm password tidak sama dengan password nya</description>
+   <description>Mengecek apakah user dapat sign up setelah mengisi semua form secara valid</description>
    <name>tc03-7</name>
    <tag></tag>
    <comment></comment>

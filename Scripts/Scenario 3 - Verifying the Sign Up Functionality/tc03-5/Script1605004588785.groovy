@@ -44,7 +44,7 @@ Mobile.delay(5)
 
 Mobile.tap(findTestObject('Object Repository/nipInput'), 0)
 
-driver.getKeyboard().sendKeys('CN00rmAT3')
+driver.getKeyboard().sendKeys('CN000rmAT3')
 
 driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
