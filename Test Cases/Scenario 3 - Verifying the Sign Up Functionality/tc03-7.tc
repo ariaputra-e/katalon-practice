@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Memeriksa respon sistem ketika kolom nip tidak terdaftar atau salah diisi</description>
-   <name>tc03-6 - Copy</name>
+   <description>Memeriksa respon sistem ketika kolom confirm password tidak sama dengan password nya</description>
+   <name>tc03-7</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b77a289a-b598-4e04-bc89-f73aa4e09fc4</testCaseGuid>
