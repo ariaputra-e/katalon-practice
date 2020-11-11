@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek apakah ada tombol khusus untuk user yang lupa dengan passwordnya ketika aplikasi dijalankan</description>
+   <name>tc04-1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a6814120-f755-4ef2-80e2-22570f9302bf</testCaseGuid>
+</TestCaseEntity>

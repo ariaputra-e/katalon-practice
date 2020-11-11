@@ -26,15 +26,19 @@ AD<?> driver = MB.getDriver()
 
 Mobile.tap(findTestObject('buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('Object Repository/emailInput'), 0)
+Mobile.tap(findTestObject('textInput-email'), 0)
 
 driver.getKeyboard().sendKeys('test@mail.com \n')
 
-Mobile.delay(10)
+Mobile.delay(5)
 
 driver.getKeyboard().sendKeys('\n')
 
+Mobile.delay(5)
+
 driver.getKeyboard().sendKeys('\n')
+
+Mobile.delay(5)
 
 Mobile.closeApplication()
 

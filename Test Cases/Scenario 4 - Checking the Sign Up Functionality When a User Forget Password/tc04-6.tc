@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengecek bagaimana sistem merespon ketika email, sales code, nip yang sudah terdaftar diinput beserta password baru yang berisikan angka dan huruf (besar dan kecil)</description>
+   <name>tc04-6</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>008c3018-067f-4575-ab99-8a3788364c65</testCaseGuid>
+</TestCaseEntity>

@@ -26,7 +26,7 @@ AD<?> driver = MB.getDriver()
 
 Mobile.tap(findTestObject('buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('Object Repository/emailInput'), 0)
+Mobile.tap(findTestObject('textInput-email'), 0)
 
 driver.getKeyboard().sendKeys('test@mail.com')
 
@@ -34,7 +34,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('Object Repository/scInput'), 0)
+Mobile.tap(findTestObject('textInput-salesCode'), 0)
 
 driver.getKeyboard().sendKeys('SC000rmAT3')
 
@@ -42,7 +42,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('Object Repository/nipInput'), 0)
+Mobile.tap(findTestObject('textInput-nip'), 0)
 
 driver.getKeyboard().sendKeys('CN000rmAT3')
 
@@ -50,7 +50,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('Object Repository/passInput'), 0)
+Mobile.tap(findTestObject('textInput-password'), 0)
 
 driver.getKeyboard().sendKeys('12345678')
 
@@ -58,7 +58,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('Object Repository/confpassInput'), 0)
+Mobile.tap(findTestObject('textInput-confirmPassword'), 0)
 
 driver.getKeyboard().sendKeys('1234567890')
 
@@ -66,7 +66,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('Object Repository/signupSubmit'), 0)
+Mobile.tap(findTestObject('button-submit'), 0)
 
 Mobile.delay(15)
 

@@ -18,17 +18,14 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (8)'), 0)
+//Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (8)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Email (12)'), 'rmAT3@mail.com', 0)
+Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
 
-Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Password (6)'), '12345678', 0)
+Mobile.setText(findTestObject('text-password'), '12345678', 0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (5)'), 0)
+Mobile.tap(findTestObject('signIn'), 0)
 
-Mobile.tap(findTestObject(''), 0)
-
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (6)'), 0)
+Mobile.delay(10)
 
 Mobile.closeApplication()
-

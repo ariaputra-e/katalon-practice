@@ -25,15 +25,15 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 AD<?> driver = MB.getDriver()
 
-Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Email'), 'rmAT3@mail.com', 0)
+Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
 
-Mobile.setEncryptedText(findTestObject('Object Repository/android.widget.EditText - Password (10)'), 'RigbBhfdqOBGNlJIWM1ClA==', 
+Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 
     0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (14)'), 0 //Button Sign In
+Mobile.tap(findTestObject('signIn'), 0 //Button Sign In
     )
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (8)'), 0 //Text Box SC
+Mobile.tap(findTestObject('digitbox1'), 0 //Text Box SC
     )
 
 driver.getKeyboard().sendKeys('2')
@@ -48,7 +48,7 @@ driver.getKeyboard().sendKeys('1')
 
 driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
-Mobile.tap(findTestObject('android.view.ViewGroup (16)'), 0)
+Mobile.tap(findTestObject('buttonCreateSecurity'), 0)
 
 Mobile.delay(10)
 

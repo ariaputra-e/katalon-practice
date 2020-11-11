@@ -18,9 +18,11 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (19)'), 0)
+Mobile.tap(findTestObject('getStarted'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.ImageView (4)'), 0)
+Mobile.tap(findTestObject('arrow-back'), 0)
+
+Mobile.delay(5)
 
 Mobile.closeApplication()
 

@@ -20,23 +20,23 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 Mobile.tap(findTestObject('buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText'), 0)
+Mobile.tap(findTestObject('textInput-email'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText (1)'), 0)
+Mobile.tap(findTestObject('textInput-salesCode'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText (2)'), 0)
+Mobile.tap(findTestObject('textInput-nip'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText (3)'), 0)
+Mobile.tap(findTestObject('textInput-password'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText (4)'), 0)
+Mobile.tap(findTestObject('textInput-confirmPassword'), 0)
 
 Mobile.hideKeyboard()
 

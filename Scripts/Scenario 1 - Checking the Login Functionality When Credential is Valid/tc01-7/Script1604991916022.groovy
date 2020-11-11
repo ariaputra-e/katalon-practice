@@ -20,24 +20,24 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 //Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (10)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Email (13)'), 'rmAT3@mail.com', 0)
+Mobile.setText(findTestObject('text-mail'), 'rmAT3@mail.com', 0)
 
-Mobile.setEncryptedText(findTestObject('Object Repository/android.widget.EditText - Password (8)'), 'RigbBhfdqOBGNlJIWM1ClA==', 
+Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 
     0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (9)'), 0)
+Mobile.tap(findTestObject('signIn'), 0)
 
 //Mobile.tap(findTestObject(''), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (10)'), 0)
+Mobile.tap(findTestObject('digitbox4'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (11)'), 0)
+Mobile.tap(findTestObject('digitbox2'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (12)'), 0)
+Mobile.tap(findTestObject('digitbox3'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.view.ViewGroup (13)'), 0)
+Mobile.tap(findTestObject('digitbox6'), 0)
 
 Mobile.closeApplication()
 

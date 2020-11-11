@@ -1,14 +1,14 @@
 [35m[Appium][39m Welcome to Appium v1.18.3
 [35m[Appium][39m Non-default server args:
-[35m[Appium][39m   port: 56635
+[35m[Appium][39m   port: 57449
 [35m[Appium][39m   loglevel: info
-[35m[Appium][39m   tmpDir: C:\Users\ROG\AppData\Local\Temp\\Katalon\Appium\Temp1605005255608
-[35m[Appium][39m   chromedriverPort: 56636
+[35m[Appium][39m   tmpDir: C:\Users\ROG\AppData\Local\Temp\\Katalon\Appium\Temp1605079011829
+[35m[Appium][39m   chromedriverPort: 57450
 [35m[Appium][39m Deprecated server args:
-[35m[Appium][39m   [31m--chromedriver-port[39m => --default-capabilities '{"chromedriverPort":56636}'
+[35m[Appium][39m   [31m--chromedriver-port[39m => --default-capabilities '{"chromedriverPort":57450}'
 [35m[Appium][39m Default capabilities, which will be added to each request unless overridden by desired capabilities:
-[35m[Appium][39m   chromedriverPort: 56636
-[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:56635
+[35m[Appium][39m   chromedriverPort: 57450
+[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:57449
 [35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
 [35m[HTTP][39m [90m{}[39m
 [35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m5 ms - 68[39m
@@ -18,14 +18,14 @@
 [35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
 [35m[HTTP][39m [90m[39m
 [35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
-[35m[HTTP][39m [90m{"desiredCapabilities":{"app":"D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk","noReset":true,"deviceName":"asus ASUS_X00RD (Android 8.0.0)","fullReset":false,"platform":"ANDROID","newCommandTimeout":1800,"platformVersion":"8.0.0","automationName":"uiautomator2","autoGrantPermissions":true,"platformName":"Android","udid":"J7AXGF05J689LXH","systemPort":56643},"capabilities":{"firstMatch":[{"appium:app":"D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk","appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceName":"asus ASUS_X00RD (Android 8.0.0)","appium:fullReset":false,"appium:newCommandTimeout":1800,"appium:noReset":true,"platform":"ANDROID","platformName":"android","appium:platformVersion":"8.0.0","appium:systemPort":56643,"appium:udid":"J7AXGF05J689LXH"}]}}[39m
+[35m[HTTP][39m [90m{"desiredCapabilities":{"app":"D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk","noReset":true,"deviceName":"asus ASUS_X00RD (Android 8.0.0)","fullReset":false,"platform":"ANDROID","newCommandTimeout":1800,"platformVersion":"8.0.0","automationName":"uiautomator2","autoGrantPermissions":true,"platformName":"Android","udid":"J7AXGF05J689LXH","systemPort":57457},"capabilities":{"firstMatch":[{"appium:app":"D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk","appium:autoGrantPermissions":true,"appium:automationName":"uiautomator2","appium:deviceName":"asus ASUS_X00RD (Android 8.0.0)","appium:fullReset":false,"appium:newCommandTimeout":1800,"appium:noReset":true,"platform":"ANDROID","platformName":"android","appium:platformVersion":"8.0.0","appium:systemPort":57457,"appium:udid":"J7AXGF05J689LXH"}]}}[39m
 [35m[BaseDriver][39m The following capabilities are not standard capabilities and should have an extension prefix:
 [35m[BaseDriver][39m   platform
 [35m[BaseDriver][39m   chromedriverPort
 [35m[Appium][39m Appium v1.18.3 creating new AndroidUiautomator2Driver (v1.56.1) session
 [35m[BaseDriver][39m The following capabilities were provided, but are not recognized by Appium:
 [35m[BaseDriver][39m   platform
-[35m[BaseDriver][39m Session created with session id: f1569389-cea9-447e-a4eb-3366851bb636
+[35m[BaseDriver][39m Session created with session id: aca323b2-c8be-4e15-84a0-18a00341330f
 [35m[BaseDriver][39m Using local app 'D:\Data Kuliah\Magang\CIMB Niaga\app-universal-release-alphasft.apk'
 [35m[ADB][39m Found 1 'build-tools' folders under 'C:\Users\ROG\.katalon\tools\android_sdk' (newest first):
 [35m[ADB][39m     C:/Users/ROG/.katalon/tools/android_sdk/build-tools/29.0.3
@@ -38,7 +38,7 @@
 [35m[ADB][39m Using 'apksigner.jar' from 'C:\Users\ROG\.katalon\tools\android_sdk\build-tools\29.0.3\lib\apksigner.jar'
 [35m[UiAutomator2][39m Server packages are not going to be (re)installed
 [35m[ADB][39m The application at 'D:\Data Kuliah\Magang\CIMB Niaga\app-universal-release-alphasft.apk' will not be cached, because the device under test has confirmed the support of streamed installs
-[35m[ADB][39m The installation of 'app-universal-release-alphasft.apk' took 8154ms
+[35m[ADB][39m The installation of 'app-universal-release-alphasft.apk' took 9338ms
 [35m[UiAutomator2][39m Starting UIAutomator2 server 4.12.2
 [35m[UiAutomator2][39m Using UIAutomator2 server from 'C:\Program Files\node-v14.15.0-win-x64\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v4.12.2.apk' and test from 'C:\Program Files\node-v14.15.0-win-x64\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
 [35m[UiAutomator2][39m Waiting up to 30000ms for UiAutomator2 to be online...
@@ -48,37 +48,32 @@
 [35m[WD Proxy][39m Determined the downstream protocol as 'W3C'
 [35m[AndroidDriver][39m Screen already unlocked, doing nothing
 [35m[UiAutomator2][39m Starting 'com.rm_tools/com.rm_tools.MainActivity and waiting for 'com.rm_tools/com.rm_tools.MainActivity'
-[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session f1569389-cea9-447e-a4eb-3366851bb636 added to master session list
-[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m19531 ms - 1307[39m
+[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session aca323b2-c8be-4e15-84a0-18a00341330f added to master session list
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m21168 ms - 1307[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636 [39m[32m200[39m [90m37 ms - 1261[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f [39m[32m200[39m [90m28 ms - 1261[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636 [39m[32m200[39m [90m30 ms - 1261[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f [39m[32m200[39m [90m28 ms - 1261[39m
 [35m[HTTP][39m [90m[39m
 [35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m2 ms - 68[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m1 ms - 68[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/timeouts[39m
+[35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/timeouts[39m
 [35m[HTTP][39m [90m{"implicit":60000}[39m
-[35m[HTTP][39m [37m<-- POST /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/timeouts [39m[32m200[39m [90m3 ms - 14[39m
+[35m[HTTP][39m [37m<-- POST /wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/timeouts [39m[32m200[39m [90m3 ms - 14[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/source[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/source[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[W3C (f1569389)][39m Driver proxy active, passing request on via HTTP proxy
-[35m[WD Proxy][39m Replacing sessionId 7621fa8b-5def-4dc1-90a0-bc789fdd074c with f1569389-cea9-447e-a4eb-3366851bb636
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/source [39m[32m200[39m [90m169 ms - 2713[39m
+[35m[W3C (aca323b2)][39m Driver proxy active, passing request on via HTTP proxy
+[35m[WD Proxy][39m Replacing sessionId f7cb2973-f7f3-451e-ab20-cebfa1225bc6 with aca323b2-c8be-4e15-84a0-18a00341330f
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/source [39m[32m200[39m [90m186 ms - 2713[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/screenshot[39m
+[35m[HTTP][39m [37m-->[39m [37mGET[39m [37m/wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/screenshot[39m
 [35m[HTTP][39m [90m{}[39m
-[35m[HTTP][39m [37m<-- GET /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636/screenshot [39m[32m200[39m [90m674 ms - 28442[39m
-[35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636[39m
-[35m[HTTP][39m [90m{}[39m
-[35m[Appium][39m Removing session f1569389-cea9-447e-a4eb-3366851bb636 from our master session list
-[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/f1569389-cea9-447e-a4eb-3366851bb636 [39m[32m200[39m [90m250 ms - 14[39m
+[35m[HTTP][39m [37m<-- GET /wd/hub/session/aca323b2-c8be-4e15-84a0-18a00341330f/screenshot [39m[32m200[39m [90m598 ms - 27752[39m
 [35m[HTTP][39m [90m[39m

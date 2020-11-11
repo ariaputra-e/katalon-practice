@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Membuka halaman sign up dan mengetikkan email yang sudah terdaftar untuk melihat bagaimana sistem merespon</description>
+   <name>tc04-2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2de10f3e-4f96-4f63-a314-189f6ead7db2</testCaseGuid>
+</TestCaseEntity>

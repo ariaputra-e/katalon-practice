@@ -19,9 +19,10 @@ import org.openqa.selenium.Keys as Keys
 import io.appium.java_client.android.AndroidDriver
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
-Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (6)'), 0)
-Mobile.tap(findTestObject('Object Repository/android.widget.EditText - Email'), 0)
-Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Email'), 'rmAT3@mail.com', 0)
+
+Mobile.tap(findTestObject('text-email'), 0)
+
+Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
 
 //Mobile.sendKeys(findTestObject('Object Repository/android.widget.EditText - Email'), Keys.chord(Keys.ENTER))
 

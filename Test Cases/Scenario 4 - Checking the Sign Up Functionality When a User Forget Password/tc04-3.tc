@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mengetikkan email, sales code, dan nip yang sudah terdaftar untuk melihat bagaimana sistem merespon</description>
+   <name>tc04-3</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>68b89ea4-3f10-4bd0-a94d-e3e5ff454e65</testCaseGuid>
+</TestCaseEntity>

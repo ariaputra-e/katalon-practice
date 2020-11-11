@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Mengecek apakah pesan error akan muncul ketika digit security code tidak di input sesuai kriteria</description>
    <name>tc01-8</name>
    <tag></tag>
    <comment></comment>

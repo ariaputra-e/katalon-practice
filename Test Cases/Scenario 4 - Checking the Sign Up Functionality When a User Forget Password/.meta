@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FolderEntity>
+   <description>folder</description>
+   <name>Scenario 4 - Checking the Sign Up Functionality When a User Forget Password</name>
+   <tag></tag>
+   <folderType>TESTCASE</folderType>
+</FolderEntity>
