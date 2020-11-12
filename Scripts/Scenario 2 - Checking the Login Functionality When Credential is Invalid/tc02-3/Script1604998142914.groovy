@@ -32,5 +32,9 @@ AndroidDriver<?> driver = MobileDriverFactory.getDriver()
 
 driver.getKeyboard().sendKeys("\n")
 
+Mobile.verifyElementAttributeValue(findTestObject('text-password'), 'focused', 'true', 5)
+
+Mobile.delay(5)
+
 Mobile.closeApplication()
 

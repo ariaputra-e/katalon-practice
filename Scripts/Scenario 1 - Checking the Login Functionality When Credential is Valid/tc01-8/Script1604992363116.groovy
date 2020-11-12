@@ -50,6 +50,10 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.tap(findTestObject('buttonCreateSecurity'), 0)
 
+alert = Mobile.getText(findTestObject('textAlertSC'), 0)
+
+println(alert)
+
 Mobile.delay(10)
 
 Mobile.closeApplication()

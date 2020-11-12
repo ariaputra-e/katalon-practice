@@ -36,9 +36,9 @@ Mobile.tap(findTestObject('signIn'), 0 //Button Sign In
 Mobile.tap(findTestObject('digitbox1'), 0 //Text Box SC
     )
 
-driver.getKeyboard().sendKeys('2')
+driver.getKeyboard().sendKeys('220011')
 
-driver.getKeyboard().sendKeys('2')
+/**driver.getKeyboard().sendKeys('2')
 
 driver.getKeyboard().sendKeys('0')
 
@@ -46,7 +46,7 @@ driver.getKeyboard().sendKeys('0')
 
 driver.getKeyboard().sendKeys('1')
 
-driver.getKeyboard().sendKeys('1')
+driver.getKeyboard().sendKeys('1') **/
 
 driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 

@@ -14,17 +14,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
-
-//Mobile.tap(findTestObject(''), 0)
-Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
-
-Mobile.setText(findTestObject('text-password'), '123456722', 0)
-
-Mobile.tap(findTestObject('signIn'), 0)
-
-Mobile.delay(5)
-Mobile.closeApplication()
+CucumberKW.runFeatureFile('Include/features/login.feature')
 

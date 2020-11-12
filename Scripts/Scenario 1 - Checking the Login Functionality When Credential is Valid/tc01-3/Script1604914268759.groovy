@@ -15,8 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
+import org.junit.After as After
 import org.openqa.selenium.Keys as Keys
-import io.appium.java_client.android.AndroidDriver
+import io.appium.java_client.android.AndroidDriver as AndroidDriver
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
@@ -25,12 +26,18 @@ Mobile.tap(findTestObject('text-email'), 0)
 Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
 
 //Mobile.sendKeys(findTestObject('Object Repository/android.widget.EditText - Email'), Keys.chord(Keys.ENTER))
-
 AndroidDriver<?> driver = MobileDriverFactory.getDriver()
+
 //driver.findElement(By.className('android.widget.EditText')).click()
 //Mobile.delay(3)
+driver.getKeyboard().sendKeys('\n')
 
-driver.getKeyboard().sendKeys("\n")
+Mobile.verifyElementAttributeValue(findTestObject('text-password'), 'focused', 'true', 5)
+
+/**println(driver.switchTo().activeElement().getLocation())
+//do what you need to use Alt+Tab
+println(driver.switchTo().activeElement().getLocation()) **/
+Mobile.delay(10)
 
 Mobile.closeApplication()
 
