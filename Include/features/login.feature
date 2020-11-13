@@ -41,7 +41,7 @@ Feature:
 
     Examples: 
       | Security Code |
-      | "2200CC"      |
+      | "200"         |
       |         22001 |
 
   Scenario Outline: Memeriksa apakah user dapat masuk ketika memasukkan security code yang telah sesuai dengan kriteria
@@ -72,7 +72,7 @@ Feature:
     Examples: 
       | Security Code | Confirmation Security Code |
       |        220011 |                     220011 |
-      |        110044 |                     112044 |
+      |        110044 |                     110044 |
 
   @Invalid
   Scenario: Mengecek bagaimana sistem merespon ketika field email serta password diisi dengan tidak valid
@@ -87,11 +87,11 @@ Feature:
     Then User akan mendapatkan pesan error
 
     Examples: 
-      | Email            |
-      | "rmAT&mail.com"  |
-      | "rmAT3.mail.com" |
-      | "rmAT3@mail@com" |
-      | "rmAT3mail.com"  |
+      | Email          |
+      | rmAT&mail.com  |
+      | rmAT3.mail.com |
+      | rmAT3@mail@com |
+      | rmAT3mail.com  |
 
   Scenario Outline: Memeriksa bagaimana sistem merespon setelah terjadi kesalahan login secara berulang-ulang pada email yang benar namun password yang salah
     Given User membuka aplikasi SFT dari perangkat
@@ -99,7 +99,7 @@ Feature:
     Then User akan mendapatkan pesan error
 
     Examples: 
-      | Email           | Password  |
-      | "rmAT@mail.com" | 123456789 |
-      | "rmAT@mail.com" | 012345678 |
-      | "rmAT@mail.com" |   1234567 |
+      | Email         | Password  |
+      | rmAT@mail.com | 123456789 |
+      | rmAT@mail.com | 012345678 |
+      | rmAT@mail.com |   1234567 |
