@@ -57,7 +57,7 @@ class login {
 	def validLogin(){
 		Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 		Mobile.delay(5)
-		Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
 		Mobile.setText(findTestObject('text-password'), '12345678', 80)
 		Mobile.tap(findTestObject('signIn'), 80)
 		Mobile.delay(15)
@@ -67,7 +67,7 @@ class login {
 	def validLoginFirst(String sc){
 		Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 		AD<?> driver = MB.getDriver()
-		Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
 		Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==',
 				80)
 		Mobile.tap(findTestObject('signIn'), 80)
@@ -107,7 +107,7 @@ class login {
 
 	@When("User mengisi kolom Email dan Password dengan salah")
 	def inputInvalidCredentials(){
-		Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
 		Mobile.setText(findTestObject('text-password'), '123456722', 80)
 	}
 
@@ -126,7 +126,7 @@ class login {
 	@When("User mengisi kolom Email dan Password dengan benar")
 	def inputValidCredentials(){
 		Mobile.tap(findTestObject('text-email'), 80)
-		Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
 		Mobile.hideKeyboard()
 		Mobile.tap(findTestObject('text-password'), 80)
 		Mobile.setText(findTestObject('text-password'), '12345678', 80)

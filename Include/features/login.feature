@@ -100,6 +100,6 @@ Feature:
 
     Examples: 
       | Email         | Password  |
-      | rmAT@mail.com | 123456789 |
-      | rmAT@mail.com | 012345678 |
-      | rmAT@mail.com |   1234567 |
+      | dsheadAT1@mail.com | 123456789 |
+      | dsheadAT1@mail.com | 012345678 |
+      | dsheadAT1@mail.com |   1234567 |
