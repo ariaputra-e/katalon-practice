@@ -1,0 +1,115 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Mengecek apakah semua elemen untuk login telah termuat dengan lengkap ketika aplikasi dibuka",
+        "description": "",
+        "id": ";mengecek-apakah-semua-elemen-untuk-login-telah-termuat-dengan-lengkap-ketika-aplikasi-dibuka",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15996432900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User membuka aplikasi SFT dari perangkat",
+            "match": {
+              "location": "login.openApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2801700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Splashscreen berhasil tertutup",
+            "match": {
+              "location": "login.statusAfterStart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14447685300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User dapat melihat elemen-elemen login seperti text box email dan password serta tombol secara lengkap",
+            "match": {
+              "location": "login.checkElements()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginInterface"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Mengecek apakah ketika field email diisi user dapat melanjutkan ke kolom password dengan menekan enter",
+        "description": "",
+        "id": ";mengecek-apakah-ketika-field-email-diisi-user-dapat-melanjutkan-ke-kolom-password-dengan-menekan-enter",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15081515500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User membuka aplikasi SFT dari perangkat",
+            "match": {
+              "location": "login.openApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12146592800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User mengisi kolom Email kemudian menekan Enter",
+            "match": {
+              "location": "login.inputEmail()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11027512400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Kursor akan lanjut ke kolom password",
+            "match": {
+              "location": "login.verifyActivePasswordBox()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginInterface"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "  Login Functionality",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "Include/features/login.feature",
+    "tags": []
+  }
+]

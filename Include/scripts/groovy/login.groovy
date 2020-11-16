@@ -46,6 +46,106 @@ import io.appium.java_client.android.AndroidDriver as AD
 import io.appium.java_client.android.nativekey.AndroidKey
 import io.appium.java_client.android.nativekey.KeyEvent
 
+class getStarted {
+	
+	@When("User mengisi kolom email dengan (.*)")
+	def inputEmailSignUp(String Email){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-email'), 80)
+		driver.getKeyboard().sendKeys(Email)
+		Mobile.hideKeyboard()
+		Mobile.delay(5)
+	}
+	
+	@And("Kolom sales code dengan (.*)")
+	def inputSCSignUp(String SC){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-salesCode'), 80)
+		driver.getKeyboard().sendKeys(SC)
+		Mobile.hideKeyboard()
+		Mobile.delay(5)
+	}
+	
+	@And("Kolom NIP dengan (.*)")
+	def inputNIPSignUp(String NIP){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-nip'), 80)
+		driver.getKeyboard().sendKeys(NIP)
+		Mobile.hideKeyboard()
+		Mobile.delay(5)
+	}
+	
+	@And("Serta kolom Password (.*) dan konfirmasi password (.*)")
+	def inputpassSignUp(String pass, String cfpass){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-password'), 80)
+		driver.getKeyboard().sendKeys(pass)
+		Mobile.hideKeyboard()
+		Mobile.delay(5)
+		
+		Mobile.tap(findTestObject('textInput-confirmPassword'), 80)
+		driver.getKeyboard().sendKeys(cfpass)
+		Mobile.hideKeyboard()
+		Mobile.delay(5)
+	}
+	
+	@When("User menekan tombol Submit")
+	def pressSubmitGS(){
+		Mobile.tap(findTestObject('button-submit'), 10)
+	}
+	
+	@Then("User akan mendapatkan pesan error pada menu Sign Up")
+	def getError(){
+		Mobile.tap(findTestObject('button-submit'), 10)
+		String alert = Mobile.getText(findTestObject('alertGetStarted'), 10)
+		println(alert)
+		Mobile.delay(5)
+	}
+	
+	@When("User menekan tombol Get Started")
+	def pressGetStarted(){
+		Mobile.tap(findTestObject('getStarted'), 80)
+		Mobile.delay(5)
+	}
+	
+	@Given("User mengisi salah satu kolom yaitu Email")
+	def inputEmailGS(){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-email'), 50)
+		driver.getKeyboard().sendKeys("dsheadAT1@mail.com")
+	}
+	
+	@When("User menekan enter")
+	def keyEnter(){
+		AD<?> driver = MB.getDriver()
+		Mobile.delay(5)
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.delay(5)
+	}
+	
+	@Then("Kursor akan fokus ke kolom selanjutnya")
+	def verifyColumnChangeGS(){
+		Mobile.verifyElementAttributeValue(findTestObject('textInput-salesCode'), 'focused', true, 10)
+		Mobile.delay(5)
+		Mobile.closeApplication()
+	}
+	
+	@Then("User akan masuk ke halaman form untuk sign up")
+	def verifySignUpPage(){
+		Mobile.verifyElementExist(findTestObject('text-GetStarted'), 50)
+		Mobile.tap(findTestObject('textInput-email'), 20)
+		Mobile.hideKeyboard()	
+		Mobile.tap(findTestObject('textInput-salesCode'), 20)
+		Mobile.hideKeyboard()
+		Mobile.tap(findTestObject('textInput-nip'), 20)
+		Mobile.hideKeyboard()
+		Mobile.tap(findTestObject('textInput-password'), 20)
+		Mobile.hideKeyboard()
+		Mobile.tap(findTestObject('textInput-confirmPassword'), 20)
+		Mobile.hideKeyboard()
+	}
+}
+
 class login {
 
 	@Given("User membuka aplikasi SFT dari perangkat")
