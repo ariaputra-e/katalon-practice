@@ -1,28 +1,11 @@
-@FunctionalTest @GetStarted
-Feature: Sign In
-Description: This feature is used to verify that user can either sign up or change their password using Get Started button
+Feature: Check
+Description: This feature is used to test a single or two scenarios
 
-	Background: User berada pada halaman Get Started
-		Given User membuka aplikasi SFT dari perangkat
-		When User menekan tombol Get Started
-		Then User akan masuk ke halaman form untuk sign up
-  	
-  @SmokeTest @ErrorHandling
-  Scenario Outline: Checking the system response when the form is filled with invalid format
-  	Given User mengisi kolom email dengan <Email>
-  	And Kolom sales code dengan <Sales Code>
-  	And Kolom NIP dengan <NIP> 
-  	And Serta kolom Password <Password> dan konfirmasi password <CF Password> 
-  	When User menekan tombol Submit
-  	Then User akan mendapatkan pesan error pada menu Sign Up
-  	
-  	Examples:
-  	  | Email            | Sales Code     | NIP           | Password       | CF Password    |
-      |   test.mail.com  | SC000rmAT3     |  CN000rmAT3   |  !234567890A   |  !234567890A   |
-      |   test@mail.com  | SC000rmAt44    |  CN000rmAT3   |  !234567890A   |  !234567890A   |
-      |   test@mail.com  | SC000rmAT3     |  CN00mAT3     |  !234567890A   |  !234567890A   |
-      |   test@mail.com  | SC000rmAT3     |  CN000rmAT3   |  !2345678      |  !2345678      |
-      |   test@mail.com  | SC000rmAt44    |  CN000rmAT3   |  !234567890A   |  !234567890B   |  	
+	Scenario: Memastikkan bahwa user dapat kembali ke halaman sebelumnya setelah masuk ke halaman Get Started
+		Given User menekan tombol Get Started
+		When User masuk ke halaman form untuk sign up.
+		And User menekan ikon kembali
+		Then User berada di halaman log in
   	
   	
   	

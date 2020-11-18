@@ -1,5 +1,5 @@
 @FunctionalTest @GetStarted
-Feature: Sign In
+Feature: Get Started
 Description: This feature is used to verify that user can either sign up or change their password using Get Started button
 
 	Background: User berada pada halaman Get Started
@@ -29,6 +29,21 @@ Description: This feature is used to verify that user can either sign up or chan
       |   test@mail.com  | SC000rmAT3     |  CN00mAT3     |  !234567890A   |  !234567890A   |
       |   test@mail.com  | SC000rmAT3     |  CN000rmAT3   |  !2345678      |  !2345678      |
       |   test@mail.com  | SC000rmAT3     |  CN000rmAT3   |  !234567890A   |  !234567890B   |  	
+      
+  @SmokeTest @Valid
+  Scenario Outline: Checking the system response when the form is filled with valid format
+  	Given User mengisi kolom email dengan <Email>
+  	And Kolom sales code dengan <Sales Code>
+  	And Kolom NIP dengan <NIP> 
+  	And Serta kolom Password <Password> dan konfirmasi password <CF Password> 
+  	When User menekan tombol Submit
+  	Then User akan diminta untuk membuat security code
+  	
+   	Examples:
+  	  | Email            | Sales Code     | NIP           | Password       | CF Password    |
+      |   test@mail.com  | SC000rmAT3     |  CN000rmAT3   |  !234567890A   |  !234567890A   |
+
+  	
   	
   	
   	

@@ -4,4 +4,14 @@
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'D:\\Data Kuliah\\Magang\\CIMB Niaga\\apk\\rm-tools-sit-demeter-v2162.apk'</initValue>
+      <name>sftApp</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'12345678'</initValue>
+      <name>pass</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -14,25 +14,29 @@ Description: This feature is used to verify the login functionality
     When User mengisi kolom Email kemudian menekan Enter
     Then Kursor akan lanjut ke kolom password
 
-  @SmokeTest @Valid
-  Scenario: Mengecek bagaimana sistem merespon ketika user memberikan kredensial yang valid untuk pertama kali
+  @SmokeTest @Valid @Passed
+  Scenario Outline: Mengecek bagaimana sistem merespon ketika user memberikan kredensial yang valid
     Given User membuka aplikasi SFT dari perangkat
-    When User mengisi kolom Email dan Password dengan benar
+    When User mengisi kolom Email dengan <Email> dan Password
     Then User dapat lanjut ke halaman pembuatan security code atau home
+    
+    @RelationManager
+    Examples:
+    | Email                   |
+    |   rmFunding@mail.com    |
+    
+    @BusinessManager
+    Examples:
+    | Email |
+    | sbmFunding@mail.com |
 	
-	@SmokeTest @Valid
-  Scenario: Mengecek bagaimana sistem merespon ketika user memberikan kredensial yang valid
-    Given User membuka aplikasi SFT dari perangkat
-    When User mengisi kolom Email dan Password dengan benar
-    Then User dapat lanjut ke halaman pembuatan security code atau home
-	
-	@SmokeTest @Valid
+	@SmokeTest @Valid 
   Scenario: Mengecek apakah ketika user memberi input pada kolom pertama maka kursor akan fokus ke kolom selanjutnya pada halaman input security code
     Given User telah berhasil melewati halaman log in
     When User mengisi salah satu digit pada Security Code
     Then Kursor pindah ke digit kosong selanjutnya
 
-	@SmokeTest @Valid
+	@SmokeTest @Valid 
   Scenario: Memeriksa apakah user dapat menginput security code tanpa harus memulai inputan dari text box pertama
     Given User telah berhasil melewati halaman log in
     When User menekan text box ke tiga di halaman security code
@@ -47,8 +51,8 @@ Description: This feature is used to verify the login functionality
 
     Examples: 
       | Security Code |
-      | "200CC"       |
-      |         22001 |
+      |   200CC       |
+      |   22001       |
 	
 	@SmokeTest @Valid
   Scenario Outline: Memeriksa apakah user dapat masuk ketika memasukkan security code yang telah sesuai dengan kriteria
@@ -72,7 +76,7 @@ Description: This feature is used to verify the login functionality
       |        220011 |                     221011 |
       |        110044 |                     112044 |
 
-  @SmokeTest @Valid
+  @SmokeTest @Valid @Passed
   Scenario Outline: Mengecek apakah user dapat masuk ketika menginput security code yang sesuai ketika konfirmasi
     Given User telah berhasil melewati halaman log in dan mengisi <Security Code> sebagai Security Code
     When User mengisi <Confirmation Security Code> pada halaman konfirmasi Security Code
@@ -81,7 +85,6 @@ Description: This feature is used to verify the login functionality
     Examples: 
       | Security Code | Confirmation Security Code |
       |        220011 |                     220011 |
-      |        110044 |                     110044 |
 
   @SmokeTest @Invalid
   Scenario: Mengecek bagaimana sistem merespon ketika field email serta password diisi dengan tidak valid
