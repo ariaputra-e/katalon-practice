@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
+//Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
 Mobile.tap(findTestObject('text-email'), 0)
 
@@ -28,5 +28,5 @@ Mobile.hideKeyboard()
 
 Mobile.tap(findTestObject('label-login'), 0)
 
-Mobile.closeApplication()
+//Mobile.closeApplication()
 

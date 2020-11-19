@@ -53,44 +53,44 @@ class stepSC {
 	@Given("User RM mengisi kolom Email dan Password")
 	def inputLogInRM() {
 		Mobile.delay(2)
-		Mobile.setText(findTestObject('text-email'), 'rmFunding@mail.com', 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.setText(findTestObject('text-email'), 'rmFunding@mail.com', GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 
 	@Given("User BM mengisi kolom Email dan Password")
 	def inputLogInBM() {
-		Mobile.setText(findTestObject('text-email'), 'sbmFunding@mail.com', 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.setText(findTestObject('text-email'), 'sbmFunding@mail.com', GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 
 	@When("User mengisi security code dan confirmation security code")
 	def inputSC() {
-		Mobile.tap(findTestObject('digitbox1'), 80)
+		Mobile.tap(findTestObject('digitbox1'), GlobalVariable.tm)
 		AD<?> driver = MB.getDriver()
 		Mobile.delay(2)
 		driver.getKeyboard().sendKeys('220011')
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 		Mobile.delay(2)
-		Mobile.tap(findTestObject('buttonCreateSecurity'), 80)
+		Mobile.tap(findTestObject('buttonCreateSecurity'), GlobalVariable.tm)
 		Mobile.delay(2)
 
-		Mobile.tap(findTestObject('digitboxConfirm1'), 40)
+		Mobile.tap(findTestObject('digitboxConfirm1'), GlobalVariable.tm)
 		Mobile.delay(2)
 		driver.getKeyboard().sendKeys('220011')
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 		Mobile.delay(2)
 
-		Mobile.tap(findTestObject('buttonConfirmSecurity'), 80)
+		Mobile.tap(findTestObject('buttonConfirmSecurity'), GlobalVariable.tm)
 	}
 
 	@Then("User masuk ke dalam halaman home")
 	def verifyHome() {
-		Mobile.verifyElementExist(findTestObject('home'), 40)
+		Mobile.verifyElementExist(findTestObject('home'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 }

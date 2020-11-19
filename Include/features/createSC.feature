@@ -1,5 +1,5 @@
-@GenerateCode
-Feature: Code Generator
+@GenerateCode @SignIn
+Feature: Security Code Generator
 Description: This feature is used generate security code for login
 
 	@RM

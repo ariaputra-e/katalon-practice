@@ -1,53 +1,13 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.annotation.SetUp
-import com.kms.katalon.core.annotation.TearDown
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.checkpoint.CheckpointFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testcase.TestCaseFactory
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testdata.TestDataFactory
-import com.kms.katalon.core.testobject.ObjectRepository
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-
-import internal.GlobalVariable
-
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
-
-import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
-import com.kms.katalon.core.webui.driver.DriverFactory
-
-import com.kms.katalon.core.testobject.RequestObject
-import com.kms.katalon.core.testobject.ResponseObject
-import com.kms.katalon.core.testobject.ConditionType
-import com.kms.katalon.core.testobject.TestObjectProperty
-
-import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper
-import com.kms.katalon.core.util.KeywordUtil
-
-import com.kms.katalon.core.webui.exception.WebElementNotFoundException
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MB
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
-
-import cucumber.api.java.Before
-import cucumber.api.java.After
 import internal.GlobalVariable
-
-import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MB
 import io.appium.java_client.android.AndroidDriver as AD
 import io.appium.java_client.android.nativekey.AndroidKey
 import io.appium.java_client.android.nativekey.KeyEvent
@@ -56,7 +16,7 @@ class forgot {
 	@Given("User fill in the security box")
 	def fillSC(){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('obj_new/digitboxSC1'), 80)
+		Mobile.tap(findTestObject('obj_new/digitboxSC1'), GlobalVariable.tm)
 		Mobile.delay(2)
 		driver.getKeyboard().sendKeys('2')
 		driver.getKeyboard().sendKeys('2')
@@ -67,36 +27,111 @@ class forgot {
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 		Mobile.delay(5)
 	}
-
-	@When("User click on Forgot Password before finish")
-	def wrongClickPass(){
-		Mobile.tap(findTestObject('obj_new/button-ForgetPassword'), 10)
+	
+	@Given("User click on Forgot Security Code button")
+	def forgotSCClick(){
+		Mobile.tap(findTestObject("obj_new/button-forgetSecCode"), GlobalVariable.tm)
+	}
+	
+	
+	@When("User enter valid credentials for log in")
+	def inputCredentials(){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject("text-email"), GlobalVariable.tm)
+		Mobile.clearText(findTestObject("text-email"), GlobalVariable.tm)
+		driver.getKeyboard().sendKeys(GlobalVariable.rmMail)
 		Mobile.delay(3)
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		driver.getKeyboard().sendKeys(GlobalVariable.pass)
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
+	}
+	
+	@Then("User is asked to create new security code")
+	def inputnewSC(){
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('digitbox1'), GlobalVariable.tm)
+		Mobile.delay(5)
+		driver.getKeyboard().sendKeys(GlobalVariable.securityCode)
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.tap(findTestObject('buttonCreateSecurity'), GlobalVariable.tm)
+		
+		//Confirm SC
+		Mobile.tap(findTestObject('digitboxConfirm1'), GlobalVariable.tm)
+		Mobile.delay(5)
+		driver.getKeyboard().sendKeys(GlobalVariable.securityCode)
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.delay(2)
+		Mobile.tap(findTestObject('buttonConfirmSecurity'), GlobalVariable.tm)
+		Mobile.delay(10)
+	}
+	
+	@And("User can proceed to the home page")
+	def verifyHome() {
+		Mobile.verifyElementExist(findTestObject('home'), GlobalVariable.tm)
+		Mobile.delay(5)
+	}
+
+	@When("User click on Forgot Password button in security code input page")
+	def wrongClickPass(){
+		Mobile.tap(findTestObject('obj_new/button-ForgetPassword'), GlobalVariable.tm)
+		Mobile.delay(3)
+	}
+	
+	@When("User re-enter new password and confirm new password in a form")
+	def resetPassword(){
+		Mobile.tap(findTestObject('obj_new/button-right'), GlobalVariable.tm)
+		Mobile.delay(3)
+		
+		//In Get Started Page
+		AD<?> driver = MB.getDriver()
+		Mobile.tap(findTestObject('textInput-nip'), GlobalVariable.tm)
+		driver.getKeyboard().sendKeys('CN000rmFunding')
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.delay(2)
+		
+		Mobile.tap(findTestObject('textInput-password'), GlobalVariable.tm)
+		driver.getKeyboard().sendKeys('!2345678Rm')
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.delay(2)
+		
+		Mobile.tap(findTestObject('textInput-confirmPassword'), GlobalVariable.tm)
+		driver.getKeyboard().sendKeys('!2345678Rm')
+		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
+		Mobile.delay(2)
+		
+		Mobile.tap(findTestObject('button-submit'), GlobalVariable.tm)
+		Mobile.delay(2)
 	}
 
 	@And("Click on Back button")
 	def clickBack(){
-		Mobile.tap(findTestObject('obj_new/button-left'), 50)
+		Mobile.tap(findTestObject('obj_new/button-left'), GlobalVariable.tm)
 		Mobile.delay(3)
 	}
 
 	@Then("User can re-enter the security code to proceed to home page")
 	def resubmitSC(){
+		Mobile.tap(findTestObject('obj_new/digitboxSC1'), GlobalVariable.tm)
 		AD<?> driver = MB.getDriver()
 		for (i in 1..6){
 			driver.pressKey(new KeyEvent(AndroidKey.DEL))
 		}
 		Mobile.delay(3)
-		Mobile.tap(findTestObject('obj_new/digitboxSC1'), 80)
 		driver.getKeyboard().sendKeys('2')
 		driver.getKeyboard().sendKeys('2')
 		driver.getKeyboard().sendKeys('0')
 		driver.getKeyboard().sendKeys('0')
 		driver.getKeyboard().sendKeys('1')
 		driver.getKeyboard().sendKeys('1')
-		Mobile.delay(5)
+		Mobile.delay(10)
 	}
-
+	
+	@Then("User get a notice to verify the password changes in their email")
+	def userPassResetNotice() {
+		Mobile.delay(2)
+		Mobile.tap(findTestObject('obj_new/button-close'), GlobalVariable.tm)
+	}
 }
 
 class getStarted {
@@ -104,7 +139,7 @@ class getStarted {
 	@When("User mengisi kolom email dengan (.*)")
 	def inputEmailSignUp(String Email){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('textInput-email'), 80)
+		Mobile.tap(findTestObject('textInput-email'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys(Email)
 		Mobile.hideKeyboard()
 		Mobile.delay(5)
@@ -113,7 +148,7 @@ class getStarted {
 	@And("Kolom sales code dengan (.*)")
 	def inputSCSignUp(String SC){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('textInput-salesCode'), 80)
+		Mobile.tap(findTestObject('textInput-salesCode'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys(SC)
 		Mobile.hideKeyboard()
 		Mobile.delay(5)
@@ -122,7 +157,7 @@ class getStarted {
 	@And("Kolom NIP dengan (.*)")
 	def inputNIPSignUp(String NIP){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('textInput-nip'), 80)
+		Mobile.tap(findTestObject('textInput-nip'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys(NIP)
 		Mobile.hideKeyboard()
 		Mobile.delay(5)
@@ -131,12 +166,12 @@ class getStarted {
 	@And("Serta kolom Password (.*) dan konfirmasi password (.*)")
 	def inputpassSignUp(String pass, String cfpass){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('textInput-password'), 80)
+		Mobile.tap(findTestObject('textInput-password'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys(pass)
 		Mobile.hideKeyboard()
 		Mobile.delay(5)
 
-		Mobile.tap(findTestObject('textInput-confirmPassword'), 80)
+		Mobile.tap(findTestObject('textInput-confirmPassword'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys(cfpass)
 		Mobile.hideKeyboard()
 		Mobile.delay(5)
@@ -144,18 +179,18 @@ class getStarted {
 
 	@When("User menekan tombol Submit")
 	def pressSubmitGS(){
-		Mobile.tap(findTestObject('button-submit'), 10)
+		Mobile.tap(findTestObject('button-submit'), GlobalVariable.tm)
 		Mobile.delay(2)
 	}
 
 	@Then("User akan diminta untuk membuat security code")
 	def verifySCPage(){
-		Mobile.verifyElementExist(findTestObject('digitBox1'), 60)
+		Mobile.verifyElementExist(findTestObject('digitBox1'), GlobalVariable.tm)
 	}
 
 	@Then("User akan mendapatkan pesan error pada menu Sign Up")
 	def getError(){
-		Mobile.tap(findTestObject('button-submit'), 10)
+		Mobile.tap(findTestObject('button-submit'), GlobalVariable.tm)
 		String alert = Mobile.getText(findTestObject('alertGetStarted'), 10)
 		println(alert)
 		Mobile.delay(5)
@@ -165,14 +200,14 @@ class getStarted {
 	@When("User menekan tombol Get Started")
 	def pressGetStarted(){
 		Mobile.delay(5)
-		Mobile.tap(findTestObject('getStarted'), 80)
+		Mobile.tap(findTestObject('getStarted'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 
 	@Given("User mengisi salah satu kolom yaitu Email")
 	def inputEmailGS(){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('textInput-email'), 50)
+		Mobile.tap(findTestObject('textInput-email'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys("dsheadAT1@mail.com")
 	}
 
@@ -186,7 +221,7 @@ class getStarted {
 
 	@Then("Kursor akan fokus ke kolom selanjutnya")
 	def verifyColumnChangeGS(){
-		Mobile.verifyElementAttributeValue(findTestObject('textInput-salesCode'), 'focused', true, 10)
+		Mobile.verifyElementAttributeValue(findTestObject('textInput-salesCode'), 'focused', true, GlobalVariable.tm)
 		Mobile.delay(5)
 		Mobile.closeApplication()
 	}
@@ -198,7 +233,7 @@ class getStarted {
 
 	@And("User menekan ikon kembali")
 	def pressArrowBack(){
-		Mobile.tap(findTestObject('arrow-back'), 20)
+		Mobile.tap(findTestObject('arrow-back'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 
@@ -224,9 +259,9 @@ class login {
 	def validLogin(){
 		Mobile.startApplication(GlobalVariable.sftApp, true)
 		Mobile.delay(5)
-		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 		Mobile.delay(15)
 	}
 
@@ -234,22 +269,21 @@ class login {
 	def validLoginFirst(String sc){
 		Mobile.startApplication(GlobalVariable.sftApp, true)
 		AD<?> driver = MB.getDriver()
-		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
-		Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==',
-				80)
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', GlobalVariable.tm)
+		Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', GlobalVariable.tm)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 
-		Mobile.tap(findTestObject('digitbox1'), 80)
+		Mobile.tap(findTestObject('digitbox1'), GlobalVariable.tm)
 		Mobile.delay(5)
 		driver.getKeyboard().sendKeys(sc)
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
-		Mobile.tap(findTestObject('buttonCreateSecurity'), 80)
+		Mobile.tap(findTestObject('buttonCreateSecurity'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 
 	@When("User mengisi (.*) pada halaman konfirmasi Security Code")
 	def confirmSC(String csc){
-		Mobile.tap(findTestObject('digitboxConfirm1'), 40)
+		Mobile.tap(findTestObject('digitboxConfirm1'), GlobalVariable.tm)
 		AD<?> driver = MB.getDriver()
 		Mobile.delay(5)
 		driver.getKeyboard().sendKeys(csc)
@@ -258,13 +292,13 @@ class login {
 
 	@When("User mengisi kolom (.*) dengan format yang salah")
 	def inputInvalidEmail(String Email){
-		Mobile.setText(findTestObject('text-email'), Email, 80)
+		Mobile.setText(findTestObject('text-email'), Email, GlobalVariable.tm)
 	}
 
 	@When("User mengisi kolom (.*) dengan benar dan kolom (.*) dengan salah")
 	def inputInValidPassword(String Email, String Password){
-		Mobile.setText(findTestObject('text-email'), Email, 80)
-		Mobile.setText(findTestObject('text-password'), Password, 80)
+		Mobile.setText(findTestObject('text-email'), Email, GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), Password, GlobalVariable.tm)
 	}
 
 	@When("Splashscreen berhasil tertutup")
@@ -274,46 +308,46 @@ class login {
 
 	@When("User mengisi kolom Email dan Password dengan salah")
 	def inputInvalidCredentials(){
-		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
-		Mobile.setText(findTestObject('text-password'), '123456722', 80)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), '123456722', GlobalVariable.tm)
 	}
 
 	@When("User menekan text box ke tiga di halaman security code")
 	def clickThirdTextBoxSC(){
-		Mobile.tap(findTestObject('digitbox3'), 80)
+		Mobile.tap(findTestObject('digitbox3'), GlobalVariable.tm)
 	}
 
 	@When("User mengisi salah satu digit pada Security Code")
 	def oneDigitInputSC(){
-		Mobile.tap(findTestObject('digitbox1'), 80)
+		Mobile.tap(findTestObject('digitbox1'), GlobalVariable.tm)
 		AD<?> driver = MB.getDriver()
 		driver.getKeyboard().sendKeys("2")
 	}
 
 	@When("User mengisi kolom Email dengan (.*) dan Password")
 	def inputValidSpec(String Email){
-		Mobile.tap(findTestObject('text-email'), 80)
-		Mobile.setText(findTestObject('text-email'), Email, 80)
+		Mobile.tap(findTestObject('text-email'), GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-email'), Email, GlobalVariable.tm)
 		Mobile.hideKeyboard()
-		Mobile.tap(findTestObject('text-password'), 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
+		Mobile.tap(findTestObject('text-password'), GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
 		Mobile.hideKeyboard()
 	}
 
 	@When("User mengisi kolom Email dan Password dengan benar")
 	def inputValidCredentials(){
-		Mobile.tap(findTestObject('text-email'), 80)
-		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', 80)
+		Mobile.tap(findTestObject('text-email'), GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-email'), 'dsheadAT1@mail.com', GlobalVariable.tm)
 		Mobile.hideKeyboard()
-		Mobile.tap(findTestObject('text-password'), 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
+		Mobile.tap(findTestObject('text-password'), GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
 		Mobile.hideKeyboard()
 	}
 
 	@When("User mengisi kolom Email kemudian menekan Enter")
 	def inputEmail(){
 		AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('text-email'), 80)
+		Mobile.tap(findTestObject('text-email'), GlobalVariable.tm)
 		driver.getKeyboard().sendKeys("rmAt@mail.com")
 		driver.getKeyboard().sendKeys("\n")
 		Mobile.delay(5)
@@ -322,7 +356,7 @@ class login {
 
 	@When("User mengisi (.*) pada kolom digit Security Code")
 	def inputSC(String sc){
-		Mobile.tap(findTestObject('digitbox1'), 80)
+		Mobile.tap(findTestObject('digitbox1'), GlobalVariable.tm)
 		AD<?> driver = MB.getDriver()
 		driver.getKeyboard().sendKeys(sc)
 		driver.pressKey(new KeyEvent(AndroidKey.ENTER))
@@ -330,7 +364,7 @@ class login {
 
 	@Then("User dapat lanjut ke halaman konfirmasi Security Code")
 	def confirmationPageVerification(){
-		Mobile.tap(findTestObject('digitboxConfirm1'), 80)
+		Mobile.tap(findTestObject('digitboxConfirm1'), GlobalVariable.tm)
 		Mobile.delay(5)
 		Mobile.closeApplication()
 	}
@@ -338,7 +372,7 @@ class login {
 	@Then("User dapat lanjut ke halaman home aplikasi")
 	def submitValidConfirmSC(){
 		//AD<?> driver = MB.getDriver()
-		Mobile.tap(findTestObject('buttonConfirmSecurity'), 20)
+		Mobile.tap(findTestObject('buttonConfirmSecurity'), GlobalVariable.tm)
 		Mobile.verifyElementExist(findTestObject('home'), 40)
 		Mobile.delay(5)
 		Mobile.closeApplication()
@@ -346,13 +380,13 @@ class login {
 
 	@Then("User tidak dapat lanjut ke halaman pembuatan security code")
 	def submitInvalidLogin(){
-		Mobile.tap(findTestObject('signIn'), 10)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 	}
 
 	@And("User akan mendapatkan pesan error")
 	def loginAlert(){
-		Mobile.tap(findTestObject('signIn'), 10)
-		String alert = Mobile.getText(findTestObject('loginAlert'), 0)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
+		String alert = Mobile.getText(findTestObject('loginAlert'), GlobalVariable.tm)
 		println(alert)
 		Mobile.delay(5)
 		Mobile.closeApplication()
@@ -362,18 +396,18 @@ class login {
 	def submitInvalidConfirmSC(){
 		//AD<?> driver = MB.getDriver()
 		//driver.pressKey(new KeyEvent(AndroidKey.ENTER))
-		Mobile.tap(findTestObject('buttonConfirmSecurity'), 80)
+		Mobile.tap(findTestObject('buttonConfirmSecurity'), GlobalVariable.tm)
 	}
 
 	@Then("User tidak dapat lanjut ke halaman selanjutnya")
 	def submitFailSC(){
-		Mobile.tap(findTestObject('buttonCreateSecurity'), 80)
+		Mobile.tap(findTestObject('buttonCreateSecurity'), GlobalVariable.tm)
 	}
 
 	@And("User diberikan pemberitahuan error")
 	def  catchErrorMessageSC(){
-		Mobile.tap(findTestObject('buttonCreateSecurity'), 80)
-		String message = Mobile.getText(findTestObject('textAlertSC'), 80)
+		Mobile.tap(findTestObject('buttonCreateSecurity'), GlobalVariable.tm)
+		String message = Mobile.getText(findTestObject('textAlertSC'), GlobalVariable.tm)
 		println(message)
 		Mobile.delay(5)
 		Mobile.closeApplication()
@@ -409,18 +443,18 @@ class login {
 
 	@Then("User dapat lanjut ke halaman pembuatan security code atau home")
 	def submitValidCredentials(){
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 		Mobile.delay(5)
 		Mobile.closeApplication()
 	}
 
 	@Then("User dapat melihat elemen-elemen login seperti text box email dan password serta tombol secara lengkap")
 	def checkElements(){
-		Mobile.tap(findTestObject('text-email'), 80)
+		Mobile.tap(findTestObject('text-email'), GlobalVariable.tm)
 		Mobile.hideKeyboard()
-		Mobile.tap(findTestObject('text-password'), 80)
+		Mobile.tap(findTestObject('text-password'), GlobalVariable.tm)
 		Mobile.hideKeyboard()
-		Mobile.tap(findTestObject('label-login'), 80)
+		Mobile.tap(findTestObject('label-login'), GlobalVariable.tm)
 		Mobile.delay(5)
 		Mobile.closeApplication()
 	}

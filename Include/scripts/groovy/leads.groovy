@@ -33,9 +33,9 @@ public class leads {
 
 	@Given("User RM mengisi kolom Email dan Password dengan benar")
 	def loginRM(){
-		Mobile.setText(findTestObject('text-email'), 'rmFunding@mail.com', 80)
-		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, 80)
-		Mobile.tap(findTestObject('signIn'), 80)
+		Mobile.setText(findTestObject('text-email'), 'rmFunding@mail.com', GlobalVariable.tm)
+		Mobile.setText(findTestObject('text-password'), GlobalVariable.pass, GlobalVariable.tm)
+		Mobile.tap(findTestObject('signIn'), GlobalVariable.tm)
 		Mobile.delay(5)
 	}
 

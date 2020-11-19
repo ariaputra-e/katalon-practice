@@ -2,7 +2,7 @@
 Feature: Login
 Description: This feature is used to verify the login functionality
   
-  @SmokeTest @InterfaceTest
+  @SmokeTest @InterfaceTest @FailedTest
   Scenario: Mengecek apakah semua elemen untuk login telah termuat dengan lengkap ketika aplikasi dibuka
     Given User membuka aplikasi SFT dari perangkat
     When Splashscreen berhasil tertutup
@@ -42,7 +42,7 @@ Description: This feature is used to verify the login functionality
     When User menekan text box ke tiga di halaman security code
     Then Kursor akan kembali ke text box pertama
 	
-	@SmokeTest @Valid
+	@SmokeTest @Valid @FailedTest
   Scenario Outline: Mengecek apakah pesan error akan muncul ketika digit security code tidak di input sesuai kriteria
     Given User telah berhasil melewati halaman log in
     When User mengisi <Security Code> pada kolom digit Security Code
@@ -93,7 +93,7 @@ Description: This feature is used to verify the login functionality
     Then User tidak dapat lanjut ke halaman pembuatan security code
     And User akan mendapatkan pesan error
 
-	@SmokeTest @Invalid
+	@SmokeTest @Invalid @FailedTest
   Scenario Outline: Memeriksa bagaimana sistem merespon ketika user menginput email dengan format yang salah
     Given User membuka aplikasi SFT dari perangkat
     When User mengisi kolom <Email> dengan format yang salah

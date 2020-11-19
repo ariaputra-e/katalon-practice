@@ -14,4 +14,24 @@
       <initValue>'12345678'</initValue>
       <name>pass</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>60</initValue>
+      <name>tm</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'rmFunding@mail.com '</initValue>
+      <name>rmMail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sbmFunding@mail.com'</initValue>
+      <name>bmMail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'220011'</initValue>
+      <name>securityCode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
