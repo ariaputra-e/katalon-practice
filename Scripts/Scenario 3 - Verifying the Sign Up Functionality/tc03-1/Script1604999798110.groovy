@@ -18,9 +18,9 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-Mobile.tap(findTestObject('getStarted'), 0)
+Mobile.tap(findTestObject('LoginPage/getStarted'), 0)
 
-Mobile.tap(findTestObject('arrow-back'), 0)
+Mobile.tap(findTestObject('GetStartedPage/arrow-back'), 0)
 
 Mobile.delay(5)
 

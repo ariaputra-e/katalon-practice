@@ -8,10 +8,9 @@ import cucumber.api.junit.Cucumber;
 
 //Generate Security Code
 
-/** @CucumberOptions(features="Include/features/createSC.feature", glue={""}, 
-tags={"@RM"}) //Untuk user RM **/
+@CucumberOptions(features="Include/features/createSC.feature", glue={""}, tags={"@RM"}) //Untuk user RM 
 
-@CucumberOptions(features="Include/features/loginpage/forgot.feature", glue={""}, tags={"@Forgot"})
+/** @CucumberOptions(features="Include/features/loginpage/forgot.feature", glue={""}, tags={"@Forgot"}) **/
 
 /** @CucumberOptions(features="Include/features/createSC.feature", glue={""}, 
 tags={"@GenerateCode", "@RM"}) //Untuk user BM **/

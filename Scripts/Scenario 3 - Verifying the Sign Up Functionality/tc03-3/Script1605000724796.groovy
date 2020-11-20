@@ -24,9 +24,9 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 AD<?> driver = MB.getDriver()
 
-Mobile.tap(findTestObject('buttonGetStarted'), 0)
+Mobile.tap(findTestObject('LoginPage/buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('textInput-email'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-email'), 0)
 
 driver.getKeyboard().sendKeys('test@mail.com \n')
 

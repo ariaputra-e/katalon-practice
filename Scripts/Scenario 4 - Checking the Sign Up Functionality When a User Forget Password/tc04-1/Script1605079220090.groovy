@@ -24,11 +24,11 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 AD<?> driver = MB.getDriver()
 
-Mobile.tap(findTestObject('buttonGetStarted'), 0)
+Mobile.tap(findTestObject('LoginPage/buttonGetStarted'), 0)
 
 Mobile.delay(5)
 
-Mobile.tap(findTestObject('arrow-back'), 0)
+Mobile.tap(findTestObject('GetStartedPage/arrow-back'), 0)
 
 Mobile.delay(15)
 

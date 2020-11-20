@@ -18,25 +18,25 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-Mobile.tap(findTestObject('buttonGetStarted'), 0)
+Mobile.tap(findTestObject('LoginPage/buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('textInput-email'), 0)
-
-Mobile.hideKeyboard()
-
-Mobile.tap(findTestObject('textInput-salesCode'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-email'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('textInput-nip'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-salesCode'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('textInput-password'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-nip'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('textInput-confirmPassword'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-password'), 0)
+
+Mobile.hideKeyboard()
+
+Mobile.tap(findTestObject('GetStartedPage/textInput-confirmPassword'), 0)
 
 Mobile.hideKeyboard()
 

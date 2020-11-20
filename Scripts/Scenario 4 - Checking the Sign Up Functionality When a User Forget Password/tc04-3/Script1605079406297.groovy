@@ -41,9 +41,9 @@ Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-rele
 
 AD<?> driver = MB.getDriver()
 
-Mobile.tap(findTestObject('buttonGetStarted'), 0)
+Mobile.tap(findTestObject('LoginPage/buttonGetStarted'), 0)
 
-Mobile.tap(findTestObject('textInput-email'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-email'), 0)
 
 driver.getKeyboard().sendKeys('rmAT3@mail.com')
 
@@ -51,7 +51,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('textInput-salesCode'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-salesCode'), 0)
 
 driver.getKeyboard().sendKeys('SC000rmAT3')
 
@@ -59,7 +59,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('textInput-nip'), 0)
+Mobile.tap(findTestObject('GetStartedPage/textInput-nip'), 0)
 
 driver.getKeyboard().sendKeys('CN000rmAT3')
 
@@ -67,7 +67,7 @@ driver.pressKey(new KeyEvent(AndroidKey.ENTER))
 
 Mobile.delay(2)
 
-Mobile.tap(findTestObject('button-submit'), 0)
+Mobile.tap(findTestObject('GetStartedPage/button-submit'), 0)
 
 Mobile.delay(15)
 

@@ -23,14 +23,14 @@ import io.appium.java_client.android.AndroidDriver as AD
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
 AD<?> driver = MB.getDriver()
-//Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (9)'), 0)
+//Mobile.tap(findTestObject('Others/android.widget.FrameLayout (9)'), 0)
 
-Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
-Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 0)
+Mobile.setText(findTestObject('LoginPage/text-email'), 'rmAT3@mail.com', 0)
+Mobile.setEncryptedText(findTestObject('LoginPage/text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 0)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
-Mobile.tap(findTestObject('digitbox1'), 0)
+Mobile.tap(findTestObject('SecurityPage/digitbox1'), 0)
 driver.getKeyboard().sendKeys("2")
 driver.getKeyboard().sendKeys("4")
 driver.getKeyboard().sendKeys("0")

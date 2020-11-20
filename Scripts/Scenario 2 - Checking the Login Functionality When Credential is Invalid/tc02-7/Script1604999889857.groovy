@@ -19,27 +19,27 @@ import org.openqa.selenium.Keys as Keys
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
 //Mobile.tap(findTestObject(''), 0)
-Mobile.setText(findTestObject('text-email'), 'rmAT3&mail.com', 0)
+Mobile.setText(findTestObject('LoginPage/text-email'), 'rmAT3&mail.com', 0)
 
-Mobile.setText(findTestObject('text-password'), '123456722', 0)
+Mobile.setText(findTestObject('LoginPage/text-password'), '123456722', 0)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 Mobile.delay(10)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 Mobile.delay(5)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 Mobile.delay(5)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 Mobile.delay(5)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 Mobile.delay(5)
 

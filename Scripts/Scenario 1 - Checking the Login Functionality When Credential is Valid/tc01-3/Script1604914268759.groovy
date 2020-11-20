@@ -21,18 +21,18 @@ import io.appium.java_client.android.AndroidDriver as AndroidDriver
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-Mobile.tap(findTestObject('text-email'), 0)
+Mobile.tap(findTestObject('LoginPage/text-email'), 0)
 
-Mobile.setText(findTestObject('text-email'), 'rmAT3@mail.com', 0)
+Mobile.setText(findTestObject('LoginPage/text-email'), 'rmAT3@mail.com', 0)
 
-//Mobile.sendKeys(findTestObject('Object Repository/android.widget.EditText - Email'), Keys.chord(Keys.ENTER))
+//Mobile.sendKeys(findTestObject('Others/android.widget.EditText - Email'), Keys.chord(Keys.ENTER))
 AndroidDriver<?> driver = MobileDriverFactory.getDriver()
 
 //driver.findElement(By.className('android.widget.EditText')).click()
 //Mobile.delay(3)
 driver.getKeyboard().sendKeys('\n')
 
-Mobile.verifyElementAttributeValue(findTestObject('text-password'), 'focused', 'true', 5)
+Mobile.verifyElementAttributeValue(findTestObject('LoginPage/text-password'), 'focused', 'true', 5)
 
 /**println(driver.switchTo().activeElement().getLocation())
 //do what you need to use Alt+Tab

@@ -18,26 +18,26 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('D:\\Data Kuliah\\Magang\\CIMB Niaga\\app-universal-release-alphasft.apk', true)
 
-//Mobile.tap(findTestObject('Object Repository/android.widget.FrameLayout (10)'), 0)
+//Mobile.tap(findTestObject('Others/android.widget.FrameLayout (10)'), 0)
 
 Mobile.setText(findTestObject('text-mail'), 'rmAT3@mail.com', 0)
 
-Mobile.setEncryptedText(findTestObject('text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 
+Mobile.setEncryptedText(findTestObject('LoginPage/text-password'), 'RigbBhfdqOBGNlJIWM1ClA==', 
     0)
 
-Mobile.tap(findTestObject('signIn'), 0)
+Mobile.tap(findTestObject('LoginPage/signIn'), 0)
 
 //Mobile.tap(findTestObject(''), 0)
 
-Mobile.tap(findTestObject('digitbox4'), 0)
+Mobile.tap(findTestObject('SecurityPage/digitbox4'), 0)
 
 Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('digitbox2'), 0)
+Mobile.tap(findTestObject('SecurityPage/digitbox2'), 0)
 
-Mobile.tap(findTestObject('digitbox3'), 0)
+Mobile.tap(findTestObject('SecurityPage/digitbox3'), 0)
 
-Mobile.tap(findTestObject('digitbox6'), 0)
+Mobile.tap(findTestObject('SecurityPage/digitbox6'), 0)
 
 Mobile.closeApplication()
 
